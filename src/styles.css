@@ -14,6 +14,12 @@
     "Times New Roman", serif;
 }
 
+@theme inline {
+  --font-kaisei: var(--font-kaisei);
+  --font-cabrito: var(--font-cabrito);
+  --font-cambria: var(--font-cambria);
+}
+
 body {
   color: var(--body-text);
   background-color: var(--primary-bg);
