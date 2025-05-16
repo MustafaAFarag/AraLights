@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Cabrito+Contrast:wght@400;500;700&display=swap");
+
+:root {
+  --body-text: #fffdf3;
+  --secondary-text: #cccccc;
+  --primary-bg: #272727;
+  --secondary-bg: #1e1e1e;
+
+  /* Font families */
+  --font-kaisei: "Kaisei Decol", serif;
+  --font-cabrito: "Cabrito Contrast", sans-serif;
+  --font-cambria: Cambria, "Hoefler Text", "Liberation Serif", Times,
+    "Times New Roman", serif;
+}
+
+body {
+  color: var(--body-text);
+  background-color: var(--primary-bg);
+  font-family: var(--font-cabrito); /* Default font */
+  font-weight: 500;
+}
+
+.max-w-8xl {
+  max-width: 1400px;
+}
