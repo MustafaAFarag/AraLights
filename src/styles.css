@@ -85,6 +85,7 @@
   --font-cambria: var(--font-cambria);
 
   --color-active-link: var(--active-link);
+  --color-secondary-text: var(--secondary-text);
 }
 
 body {

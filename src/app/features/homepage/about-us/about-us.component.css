@@ -1,0 +1,12 @@
+.bullet-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.bullet-point::before {
+  content: "•";
+  margin-right: 0.75rem;
+
+  font-size: 1.5rem;
+}

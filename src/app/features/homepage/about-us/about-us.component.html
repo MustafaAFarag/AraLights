@@ -1,1 +1,93 @@
-<p>about-us works!</p>
+<div class="container mx-auto px-4 py-16 md:py-24">
+  <!-- Header -->
+  <app-header title="About Us"></app-header>
+
+  <!-- Main Content -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+    <!-- Left Column - Text Content -->
+    <div class="max-w-[600px]">
+      <h2
+        class="text-3xl md:text-[40px] font-medium font-kaisei mb-6 leading-tight"
+      >
+        Lighting the Future with<br />Precision and Creativity
+      </h2>
+
+      <p
+        class="text-secondary-text font-medium text-[24px] mb-10 leading-relaxed"
+      >
+        ARA Lighting is part of the leading ARA Group, originally founded with
+        American roots. Established in 2020 and headquartered in Bahrain, ARA
+        Lighting is a specialist in advanced lighting solutions across the Gulf
+        and international markets.
+      </p>
+
+      <div class="space-y-4 text-2xl font-bold font-kaisei">
+        <div class="bullet-point">1000+ Happy Clients</div>
+        <div class="bullet-point">40+ Projects</div>
+        <div class="bullet-point">30+ Professional Partners</div>
+      </div>
+    </div>
+
+    <!-- Right Column - Image Grid -->
+    <div
+      class="grid grid-cols-[391px_278px] grid-rows-[321px_331px] gap-4 relative"
+    >
+      <!-- Top Left (wide, short) -->
+      <div style="z-index: 1">
+        <img
+          src="/assets/top-left.png"
+          alt="Modern living room with elegant lighting"
+          style="
+            width: 391px;
+            height: 321px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+          "
+        />
+      </div>
+      <!-- Top Right (narrow, tall, shifted up) -->
+      <div style="transform: translateY(-30px); z-index: 2">
+        <img
+          src="/assets/top-right.png"
+          alt="Luxury interior with ceiling lighting"
+          style="
+            width: 278px;
+            height: 331px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+          "
+        />
+      </div>
+      <!-- Bottom Left (narrow, tall, shifted down) -->
+      <div style="transform: translateY(30px); z-index: 2">
+        <img
+          src="/assets/bottom-left.png"
+          alt="Corridor with linear lighting design"
+          style="
+            width: 278px;
+            height: 331px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+          "
+        />
+      </div>
+      <!-- Bottom Right (wide, short) -->
+      <div style="z-index: 1">
+        <img
+          src="/assets/bottom-right.png"
+          alt="Corridor with linear lighting design"
+          style="
+            width: 480px;
+            height: 321px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+          "
+        />
+      </div>
+    </div>
+  </div>
+</div>
