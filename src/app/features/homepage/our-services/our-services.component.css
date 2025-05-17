@@ -1,0 +1,26 @@
+/* Custom CSS for overlapping effect */
+@media (min-width: 768px) {
+  :host ::ng-deep .flex > div:not(:first-child) {
+    margin-left: -2.5rem;
+  }
+}
+
+/* Add a single concentric ring around each service circle */
+.service-circle {
+  position: relative;
+  z-index: 1;
+}
+
+.service-circle::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  border: 1.5px solid rgba(255, 255, 255, 0.13);
+}
