@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-marquee',
-  imports: [],
+  standalone: true,
   templateUrl: './marquee.component.html',
-  styleUrl: './marquee.component.css'
+  styleUrls: ['./marquee.component.css'],
 })
-export class MarqueeComponent {
-
-}
+export class MarqueeComponent {}
