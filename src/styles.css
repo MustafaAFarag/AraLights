@@ -86,6 +86,7 @@
 
   --color-active-link: var(--active-link);
   --color-secondary-text: var(--secondary-text);
+  --color-secondary-bg: var(--secondary-bg);
 }
 
 body {
