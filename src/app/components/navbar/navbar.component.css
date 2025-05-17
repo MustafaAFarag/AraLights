@@ -1,0 +1,37 @@
+.text-active-link {
+  position: relative;
+  color: #ffd600 !important; /* Yellow color for active link */
+}
+
+.text-active-link::before {
+  content: "";
+  position: absolute;
+  top: -14px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px; /* Adjust width as needed */
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 0 6px 2px white;
+}
+
+.text-active-link::after {
+  content: "";
+  position: absolute;
+  top: -14px; /* Same as the bar's top value */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px; /* Adjust width as needed */
+  height: 28px; /* Make it taller for a longer beam */
+  background: radial-gradient(
+    ellipse at top,
+    #fff 0%,
+    rgba(255, 255, 255, 0.2) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(2px);
+}

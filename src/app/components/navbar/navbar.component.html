@@ -1,1 +1,47 @@
-<p>navbar works!</p>
+<nav class="max-w-8xl mx-auto flex items-center py-5">
+  <div class="flex-shrink-0">
+    <img src="/assets/logo.png" alt="logo" />
+  </div>
+  <div class="flex-1 flex justify-center">
+    <ul class="flex gap-10">
+      <li
+        class="cursor-pointer"
+        routerLink="/"
+        routerLinkActive="text-active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </li>
+      <li
+        class="cursor-pointer"
+        routerLink="/services"
+        routerLinkActive="text-active-link"
+      >
+        Services
+      </li>
+      <li
+        class="cursor-pointer"
+        routerLink="/projects"
+        routerLinkActive="text-active-link"
+      >
+        Projects
+      </li>
+      <li
+        class="cursor-pointer"
+        routerLink="/interior-light"
+        routerLinkActive="text-active-link"
+      >
+        Interior light
+      </li>
+      <li
+        class="cursor-pointer"
+        routerLink="/contact"
+        routerLinkActive="text-active-link"
+      >
+        Contact us
+      </li>
+    </ul>
+  </div>
+  <div class="flex-shrink-0 w-16"></div>
+  <!-- Spacer for symmetry, adjust width as needed -->
+</nav>
