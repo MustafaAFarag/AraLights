@@ -1,0 +1,18 @@
+.carousel-slide {
+  width: 70vw !important;
+  height: 70vh !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease,
+    opacity 0.4s ease;
+  opacity: 0.5;
+  filter: blur(2px);
+  transform: scale(0.9);
+  z-index: 0;
+}
+
+.carousel-slide.swiper-slide-active {
+  transform: scale(1.05);
+  opacity: 1;
+  filter: none;
+  z-index: 2;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}

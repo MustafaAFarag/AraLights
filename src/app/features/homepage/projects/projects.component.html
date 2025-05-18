@@ -1,1 +1,87 @@
-<p>projects works!</p>
+<section class="bg-secondary-bg py-16">
+  <app-header title="Projects"></app-header>
+
+  <nav class="flex justify-center mt-8 mb-24">
+    <ul class="flex bg-[#141414] rounded-full px-6 py-2 shadow-lg gap-4">
+      <li class="relative">
+        <button
+          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-active-link"
+        >
+          Interior
+        </button>
+      </li>
+      <li>
+        <button
+          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+        >
+          Interior
+        </button>
+      </li>
+      <li>
+        <button
+          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+        >
+          Interior
+        </button>
+      </li>
+      <li>
+        <button
+          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+        >
+          Interior
+        </button>
+      </li>
+      <li>
+        <button
+          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+        >
+          Interior
+        </button>
+      </li>
+      <li>
+        <button
+          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400"
+        >
+          Interior
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <div class="relative overflow-visible w-full flex justify-center">
+    <swiper-container
+      loop="true"
+      slides-per-view="auto"
+      centered-slides="true"
+      effect="coverflow"
+      coverflow-effect-rotate="0"
+      coverflow-effect-stretch="0"
+      coverflow-effect-depth="100"
+      coverflow-effect-modifier="1"
+      coverflow-effect-slide-shadows="false"
+      space-between="30"
+      class="w-full overflow-visible"
+    >
+      <swiper-slide class="carousel-slide">
+        <img
+          src="assets/projects-image.jpg"
+          alt="project-1"
+          class="rounded-2xl"
+        />
+      </swiper-slide>
+      <swiper-slide class="carousel-slide">
+        <img
+          src="assets/projects-image.jpg"
+          alt="project-2"
+          class="rounded-2xl"
+        />
+      </swiper-slide>
+      <swiper-slide class="carousel-slide">
+        <img
+          src="assets/projects-image.jpg"
+          alt="project-3"
+          class="rounded-2xl"
+        />
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>
