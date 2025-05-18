@@ -1,1 +1,49 @@
-<p>testimonials works!</p>
+<div class="py-16">
+  <app-header title="Our Client Reviews"></app-header>
+
+  <div class="stock-ticker">
+    <ul>
+      <li *ngFor="let testimonial of testimonials">
+        <section class="border-2 w-[592px] border-gray-300 rounded-md p-5">
+          <div class="flex justify-end items-center mr-5 mb-3">
+            <img src="assets/stars.png" />
+          </div>
+          <p class="font-cabrito font-normal text-lg mb-5">
+            {{ testimonial.text }}
+          </p>
+          <div class="flex items-center gap-4">
+            <img [src]="testimonial.image" class="h-11 w-11 rounded-full" />
+            <div>
+              <h3>{{ testimonial.name }}</h3>
+              <p>{{ testimonial.position }}, {{ testimonial.company }}</p>
+            </div>
+          </div>
+        </section>
+      </li>
+    </ul>
+
+    <ul aria-hidden="true">
+      <li *ngFor="let testimonial of testimonials">
+        <section class="border-2 w-[592px] border-gray-300 rounded-md p-5">
+          <div class="flex justify-end items-center mr-5 mb-3">
+            <img src="assets/stars.png" />
+          </div>
+          <p class="font-cabrito font-normal text-lg mb-5">
+            {{ testimonial.text }}
+          </p>
+          <div class="flex items-center gap-4">
+            <img [src]="testimonial.image" class="h-11 w-11 rounded-full" />
+            <div>
+              <h3>{{ testimonial.name }}</h3>
+              <p>{{ testimonial.position }}, {{ testimonial.company }}</p>
+            </div>
+          </div>
+        </section>
+      </li>
+    </ul>
+  </div>
+
+  <div class="flex justify-center items-center">
+    <img src="assets/mouse-scroll.png" />
+  </div>
+</div>

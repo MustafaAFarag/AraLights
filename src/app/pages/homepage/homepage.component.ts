@@ -6,6 +6,7 @@ import { MarqueeComponent } from '../../features/homepage/marquee/marquee.compon
 import { ProjectsComponent } from '../../features/homepage/projects/projects.component';
 import { TestimonialsComponent } from '../../features/homepage/testimonials/testimonials.component';
 import { CtaComponent } from '../../features/homepage/cta/cta.component';
+import { TestominalsTestComponent } from '../../components/testominals-test/testominals-test.component';
 @Component({
   selector: 'app-homepage',
   imports: [
@@ -16,6 +17,7 @@ import { CtaComponent } from '../../features/homepage/cta/cta.component';
     ProjectsComponent,
     TestimonialsComponent,
     CtaComponent,
+    TestominalsTestComponent,
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css',

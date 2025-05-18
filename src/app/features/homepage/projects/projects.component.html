@@ -47,40 +47,16 @@
       </li>
     </ul>
   </nav>
-  <div class="relative overflow-visible w-full flex justify-center">
+  <div>
     <swiper-container
-      loop="true"
-      slides-per-view="auto"
-      centered-slides="true"
-      effect="coverflow"
-      coverflow-effect-rotate="0"
-      coverflow-effect-stretch="0"
-      coverflow-effect-depth="100"
-      coverflow-effect-modifier="1"
-      coverflow-effect-slide-shadows="false"
+      class="mySwiper"
       space-between="30"
-      class="w-full overflow-visible"
+      slides-per-view="3"
+      pagination="true"
+      pagination-clickable="true"
     >
-      <swiper-slide class="carousel-slide">
-        <img
-          src="assets/projects-image.jpg"
-          alt="project-1"
-          class="rounded-2xl"
-        />
-      </swiper-slide>
-      <swiper-slide class="carousel-slide">
-        <img
-          src="assets/projects-image.jpg"
-          alt="project-2"
-          class="rounded-2xl"
-        />
-      </swiper-slide>
-      <swiper-slide class="carousel-slide">
-        <img
-          src="assets/projects-image.jpg"
-          alt="project-3"
-          class="rounded-2xl"
-        />
+      <swiper-slide *ngFor="let slide of slides">
+        <img src="assets/projects-image.jpg" />
       </swiper-slide>
     </swiper-container>
   </div>
