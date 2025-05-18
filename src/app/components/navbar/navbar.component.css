@@ -1,6 +1,5 @@
 .text-active-link {
   position: relative;
-  color: #ffd600 !important; /* Yellow color for active link */
 }
 
 .text-active-link::before {
