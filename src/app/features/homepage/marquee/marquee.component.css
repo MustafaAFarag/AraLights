@@ -22,6 +22,10 @@ svg {
   overflow: hidden;
   position: relative;
   background: transparent;
+  user-select: none;
+  --gap: 20px;
+  display: flex;
+  gap: var(--gap);
 }
 
 .marquee {
@@ -35,9 +39,7 @@ svg {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
-  animation: marquee-right infinite;
-  animation-timing-function: linear;
-  animation-duration: 50s;
+  animation: scroll 30s linear infinite;
   color: white;
   padding: 1rem 0;
   will-change: transform;
@@ -48,8 +50,8 @@ svg {
   vertical-align: middle;
 }
 
-@keyframes marquee-right {
+@keyframes scroll {
   to {
-    transform: translateX(calc(-50% - 1px));
+    transform: translateX(calc(-100% - var(--gap)));
   }
 }
