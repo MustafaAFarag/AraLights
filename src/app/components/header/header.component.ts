@@ -28,7 +28,6 @@ export class HeaderComponent implements AfterViewInit {
       duration: 0.3,
       scrollTrigger: {
         trigger: this.titleEl.nativeElement,
-        once: true,
       },
     });
   }
