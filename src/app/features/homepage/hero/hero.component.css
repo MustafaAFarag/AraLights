@@ -1,1 +1,116 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes hoverGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+      0 0 25px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes glowFadeOut {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+      0 0 25px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0), 0 0 0px rgba(255, 255, 255, 0);
+  }
+}
+
+.animate-title {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  position: relative;
+  cursor: default;
+  color: white;
+  display: inline-block;
+}
+
+.word {
+  display: inline-block;
+  transition: all 0.3s ease;
+  padding: 0 2px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.word-spacer {
+  display: inline-block;
+  width: 0.25em;
+}
+
+.word:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* RTL Support */
+[dir="rtl"] .word {
+  padding: 0 2px;
+}
+
+[dir="rtl"] .word-spacer {
+  width: 0.25em;
+}
+
+.animate-description {
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.glow-button {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  animation: buttonGlow 2s ease-in-out infinite;
+}
+
+.glow-button:not(:hover) {
+  animation: glowFadeOut 0.5s ease-out forwards;
+}

@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../../../components/button/button.component';
 
 @Component({
   selector: 'app-cta',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, ButtonComponent],
   templateUrl: './cta.component.html',
-  styleUrl: './cta.component.css'
+  styleUrls: ['./cta.component.css'],
 })
-export class CtaComponent {
-
-}
+export class CtaComponent {}
