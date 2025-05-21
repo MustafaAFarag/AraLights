@@ -49,10 +49,7 @@ svg {
 }
 
 @keyframes marquee-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
+  to {
     transform: translateX(calc(-50% - 1px));
   }
 }
