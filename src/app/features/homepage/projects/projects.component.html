@@ -50,13 +50,7 @@
     </ul>
   </nav>
   <div>
-    <swiper-container
-      class="mySwiper"
-      space-between="30"
-      slides-per-view="auto"
-      navigation="true"
-      breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1440": {"slidesPerView": 3}}'
-    >
+    <swiper-container class="mySwiper">
       <swiper-slide *ngFor="let slide of slides">
         <div class="relative">
           <img
