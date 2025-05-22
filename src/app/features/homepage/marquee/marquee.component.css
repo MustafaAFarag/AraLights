@@ -24,15 +24,22 @@ svg {
   background: transparent;
   user-select: none;
   --gap: 20px;
-  display: flex;
-  gap: var(--gap);
 }
 
 .marquee {
   display: flex;
-  width: 100%;
   overflow: hidden;
   position: relative;
+}
+
+.marquee ul {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .text-track {
@@ -51,7 +58,10 @@ svg {
 }
 
 @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
   to {
-    transform: translateX(calc(-100% - var(--gap)));
+    transform: translateX(calc(-100%));
   }
 }
