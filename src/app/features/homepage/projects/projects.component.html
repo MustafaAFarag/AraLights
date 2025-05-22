@@ -1,48 +1,48 @@
 <section class="bg-secondary-bg py-16">
   <app-header title="Projects"></app-header>
 
-  <nav class="flex justify-center mt-8 mb-24">
+  <nav class="flex justify-center mt-8 mb-10">
     <ul
-      class="bg-[#141414] rounded-full px-6 py-2 shadow-lg gap-4 hidden lg:flex"
+      class="bg-[#141414] rounded-full px-2 sm:px-4 md:px-6 py-1 sm:py-2 shadow-lg flex flex-wrap justify-center gap-1 sm:gap-2 lg:gap-4"
     >
       <li class="relative">
         <button
-          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-active-link"
+          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-active-link"
         >
           Interior
         </button>
       </li>
       <li>
         <button
-          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
         >
           Interior
         </button>
       </li>
       <li>
         <button
-          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
         >
           Interior
         </button>
       </li>
       <li>
         <button
-          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
         >
           Interior
         </button>
       </li>
       <li>
         <button
-          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
         >
           Interior
         </button>
       </li>
       <li>
         <button
-          class="px-5 py-2 rounded-full font-medium text-lg shadow hover:text-yellow-400 text-secondary-text"
+          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
         >
           Interior
         </button>
@@ -53,11 +53,28 @@
     <swiper-container
       class="mySwiper"
       space-between="30"
-      slides-per-view="3"
+      slides-per-view="auto"
       navigation="true"
+      breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1440": {"slidesPerView": 3}}'
     >
       <swiper-slide *ngFor="let slide of slides">
-        <img src="assets/projects-image.jpg" />
+        <div class="relative">
+          <img
+            src="assets/projects-image.jpg"
+            class="w-full h-auto md:h-[500px] lg:h-[600px] xl:h-[667px] object-cover"
+          />
+          <div
+            class="absolute bottom-0 left-0 p-2 md:p-3 lg:p-4 bg-black/20 font-medium text-start font-kaisei text-white w-full"
+          >
+            <p class="text-lg md:text-xl lg:text-2xl">
+              Project : Al Yasmen Tower
+            </p>
+            <p class="text-sm md:text-base lg:text-lg">Client : Amr Nasser</p>
+            <p class="text-sm md:text-base lg:text-lg">
+              Location : Center of the Arabian Gulf
+            </p>
+          </div>
+        </div>
       </swiper-slide>
     </swiper-container>
   </div>
