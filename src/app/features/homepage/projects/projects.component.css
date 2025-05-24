@@ -35,43 +35,95 @@
   filter: blur(2px);
 }
 
-swiper-container {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.carousel {
+  background: #eee;
   width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #8c8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 400px;
+  font-size: 80px;
+  color: white;
+}
+
+.gallery {
+  width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 
-swiper-slide {
-  transition: transform 0.3s ease, filter 0.3s ease;
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
+.gallery-cell {
+  width: 100%;
+  height: 400px;
+  margin-right: 20px;
+  counter-increment: gallery-cell;
+  position: relative;
 }
 
-swiper-slide img {
-  display: block;
-  object-fit: cover;
+/* Flickity buttons */
+.flickity-button {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-  swiper-slide {
-    width: calc(
-      50% - 15px
-    ) !important; /* 2 slides per view with 30px spacing */
-  }
+.flickity-button:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-@media (min-width: 1440px) {
-  swiper-slide {
-    width: calc(
-      33.333% - 20px
-    ) !important; /* 3 slides per view with 30px spacing */
-  }
+.flickity-button-icon {
+  fill: white;
+}
+
+.flickity-prev-next-button {
+  width: 44px;
+  height: 44px;
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+/* Flickity page dots */
+.flickity-page-dots {
+  bottom: -40px;
+}
+
+.flickity-page-dots .dot {
+  width: 10px;
+  height: 10px;
+  opacity: 0.3;
+  background: white;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+  background: white;
 }
