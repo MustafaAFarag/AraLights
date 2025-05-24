@@ -52,7 +52,7 @@
   <!-- Carousel -->
   <div #flickityContainer class="carousel">
     <div class="carousel-cell" *ngFor="let slide of slides; let i = index">
-      <div class="carousel-cell-inner">
+      <div class="carousel-cell-inner relative w-full h-full">
         <img
           src="assets/projects-image.jpg"
           alt="Project Image"
@@ -63,6 +63,19 @@
             border-radius: 5px;
           "
         />
+        <div class="absolute bottom-4 w-full left-4 bg-black/10">
+          <div class="flex flex-col gap-2 z-10 font-kaisei">
+            <span class="text-2xl font-medium">
+              Project : Al Yasmen Tower
+            </span>
+            <span class="text-xl">Client : Amr Nasser</span>
+            <span class="text-lg"
+              >Location : center of the Arabian Gulf between latitudes 25.32 and
+              26.20 north and longitude 50.20 and 50.50 east, near the east
+              coast of the Kingdom .</span
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
