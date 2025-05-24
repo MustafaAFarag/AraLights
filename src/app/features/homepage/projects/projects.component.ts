@@ -41,16 +41,8 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
               this.flickityContainer.nativeElement,
               {
                 wrapAround: true,
-                cellAlign: 'center',
-                contain: true,
                 pageDots: false,
                 prevNextButtons: false,
-                autoPlay: false,
-                draggable: true,
-                freeScroll: false,
-                groupCells: false,
-                adaptiveHeight: true,
-                cellSelector: '.carousel-cell',
               }
             );
             console.log('Flickity initialized successfully');
