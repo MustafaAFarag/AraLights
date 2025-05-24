@@ -145,3 +145,12 @@ body {
   opacity: 1;
   background: white;
 }
+
+@media (min-width: 768px) {
+  .flickity-prev-next-button.previous {
+    display: none;
+  }
+  .flickity-prev-next-button.next {
+    display: none;
+  }
+}
