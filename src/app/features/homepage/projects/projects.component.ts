@@ -40,11 +40,43 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
             this.flickityInstance = new Flickity(
               this.flickityContainer.nativeElement,
               {
-                wrapAround: true,
+                wrapAround: false,
                 pageDots: false,
                 prevNextButtons: true,
+                draggable: true,
+                cellSelector: '.carousel-cell',
               }
             );
+
+            // Handle button visibility and drag behavior
+            this.flickityInstance.on('select', () => {
+              const isFirst = this.flickityInstance.selectedIndex === 0;
+              const isLast =
+                this.flickityInstance.selectedIndex ===
+                this.flickityInstance.slides.length - 1;
+
+              // Disable/enable previous button
+              const prevButton =
+                this.flickityContainer.nativeElement.querySelector(
+                  '.flickity-prev-next-button.previous'
+                );
+              if (prevButton) {
+                prevButton.style.display = isFirst ? 'none' : 'block';
+              }
+
+              // Disable/enable next button
+              const nextButton =
+                this.flickityContainer.nativeElement.querySelector(
+                  '.flickity-prev-next-button.next'
+                );
+              if (nextButton) {
+                nextButton.style.display = isLast ? 'none' : 'block';
+              }
+            });
+
+            // Initial button state
+            this.flickityInstance.select(0);
+
             console.log('Flickity initialized successfully');
           }
         }, 0);

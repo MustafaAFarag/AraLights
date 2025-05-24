@@ -129,6 +129,13 @@ body {
   right: 10px;
 }
 
+/* Hide navigation buttons on desktop */
+@media (min-width: 768px) {
+  .flickity-prev-next-button {
+    display: none !important;
+  }
+}
+
 /* Flickity page dots */
 .flickity-page-dots {
   bottom: -40px;
@@ -144,13 +151,4 @@ body {
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
   background: white;
-}
-
-@media (min-width: 768px) {
-  .flickity-prev-next-button.previous {
-    display: none;
-  }
-  .flickity-prev-next-button.next {
-    display: none;
-  }
 }
