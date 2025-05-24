@@ -50,7 +50,7 @@ body {
 
 .carousel-cell {
   width: 77%;
-  height: 667px;
+  height: 800px;
   margin-right: 20px;
   border-radius: 5px;
   counter-increment: carousel-cell;
@@ -62,14 +62,18 @@ body {
   transition: transform 0.3s;
 }
 
-.carousel-cell.is-selected {
-  transform: translateY(5rem);
-  transition: transform 0.3s;
-  z-index: 2; /* Optional: bring active slide above others */
+.carousel-cell.is-selected .carousel-cell-inner {
+  transform: translateY(3rem); /* or translateX(5rem) */
 }
 
-.carousel-cell.is-selected .carousel-cell-inner {
-  transform: translateY(5rem); /* or translateX(5rem) */
+.carousel-cell.is-selected .overlay {
+  opacity: 0 !important;
+  transition: opacity 0.3s;
+}
+
+.overlay {
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .gallery {
