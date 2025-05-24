@@ -42,7 +42,7 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
               {
                 wrapAround: true,
                 pageDots: false,
-                prevNextButtons: false,
+                prevNextButtons: true,
               }
             );
             console.log('Flickity initialized successfully');
