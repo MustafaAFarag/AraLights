@@ -44,28 +44,32 @@ body {
 }
 
 .carousel {
-  background: #eee;
   width: 100%;
   margin: 0 auto;
 }
 
 .carousel-cell {
-  width: 66%;
-  height: 400px;
-  margin-right: 10px;
-  background: #8c8;
+  width: 77%;
+  height: 667px;
+  margin-right: 20px;
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
 
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 400px;
-  font-size: 80px;
-  color: white;
+.carousel-cell-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.carousel-cell.is-selected {
+  transform: translateY(5rem);
+  transition: transform 0.3s;
+  z-index: 2; /* Optional: bring active slide above others */
+}
+
+.carousel-cell.is-selected .carousel-cell-inner {
+  transform: translateY(5rem); /* or translateX(5rem) */
 }
 
 .gallery {

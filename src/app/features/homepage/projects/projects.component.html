@@ -1,4 +1,4 @@
-<section class="bg-secondary-bg py-16">
+<section class="bg-secondary-bg pt-16 pb-32">
   <app-header title="Projects"></app-header>
 
   <nav class="flex justify-center mt-8 mb-10">
@@ -52,10 +52,17 @@
   <!-- Carousel -->
   <div #flickityContainer class="carousel">
     <div class="carousel-cell" *ngFor="let slide of slides; let i = index">
-      <div
-        class="w-full h-[400px] bg-gray-800 rounded-lg flex items-center justify-center text-white text-2xl"
-      >
-        Slide {{ i + 1 }}
+      <div class="carousel-cell-inner">
+        <img
+          src="assets/projects-image.jpg"
+          alt="Project Image"
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          "
+        />
       </div>
     </div>
   </div>
