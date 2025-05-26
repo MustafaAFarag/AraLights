@@ -59,7 +59,7 @@ body {
 @media (min-width: 768px) {
   .carousel-cell {
     width: 77%;
-    height: 800px;
+    height: 600px;
     margin-right: 20px;
   }
 }

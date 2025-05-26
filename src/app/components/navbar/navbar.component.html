@@ -1,151 +1,153 @@
 <!-- navbar.component.html -->
-<nav class="max-w-8xl mx-auto flex items-center justify-between py-5 px-4">
-  <!-- Logo -->
-  <div class="flex-shrink-0">
-    <img src="/assets/logo.png" alt="logo" class="h-10" />
-  </div>
+ <section class="bg-primary-bg sticky top-0 z-50">
 
-  <!-- Desktop Menu -->
-  <ul class="hidden lg:flex gap-10 text-lg">
-    <li
-      routerLink="/"
-      routerLinkActive="text-active-link"
+   <nav class="max-w-8xl mx-auto flex items-center justify-between  py-5 px-4 md:px-6 ">
+     <!-- Logo -->
+     <div class="flex-shrink-0">
+       <img src="/assets/logo.png" alt="logo" class="h-10" />
+      </div>
+      
+      <!-- Desktop Menu -->
+      <ul class="hidden lg:flex gap-10 text-lg">
+        <li
+        routerLink="/"
+        routerLinkActive="text-active-link"
       [routerLinkActiveOptions]="{ exact: true }"
       class="cursor-pointer hover:text-active-link"
-    >
+      >
       Home
     </li>
     <li
-      routerLink="/services"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
+    routerLink="/services"
+    routerLinkActive="text-active-link"
+    class="cursor-pointer hover:text-active-link"
     >
-      Services
-    </li>
-    <li
-      routerLink="/projects"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
-    >
-      Projects
-    </li>
-    <li
-      routerLink="/interior-light"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
-    >
-      Interior light
-    </li>
-    <li
-      routerLink="/about-us"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
-    >
-      About us
-    </li>
-    <li
-      routerLink="/contact"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
-    >
-      Contact us
-    </li>
-  </ul>
+    Services
+  </li>
+  <li
+  routerLink="/projects"
+  routerLinkActive="text-active-link"
+  class="cursor-pointer hover:text-active-link"
+  >
+  Projects
+</li>
+<li
+routerLink="/interior-light"
+routerLinkActive="text-active-link"
+class="cursor-pointer hover:text-active-link"
+>
+Interior light
+</li>
+<li
+routerLink="/about-us"
+routerLinkActive="text-active-link"
+class="cursor-pointer hover:text-active-link"
+>
+About us
+</li>
+<li
+routerLink="/contact"
+routerLinkActive="text-active-link"
+class="cursor-pointer hover:text-active-link"
+>
+Contact us
+</li>
+</ul>
 
-  <div class="flex-shrink-0 w-16 hidden lg:block"></div>
+<div class="flex-shrink-0 w-16 hidden lg:block"></div>
 
-  <!-- Hamburger Icon (Mobile Only) -->
-  <button (click)="toggleSidebar()" class="lg:hidden">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+<!-- Hamburger Icon (Mobile Only) -->
+<button (click)="toggleSidebar()" class="lg:hidden">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="h-6 w-6"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  >
+  <path
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="2"
         d="M4 6h16M4 12h16M4 18h16"
-      />
-    </svg>
-  </button>
-</nav>
-
-<!-- Sidebar Drawer -->
-<div
+        />
+      </svg>
+    </button>
+  </nav>
+  
+  <!-- Sidebar Drawer -->
+  <div
   class="fixed top-0 left-0 h-full bg-primary-bg w-[70vw] md:w-[50vw] shadow-lg z-50 transform transition-transform duration-300 ease-in-out"
   [ngClass]="{
     '-translate-x-full': !isSidebarOpen,
     'translate-x-0': isSidebarOpen
   }"
 >
-  <div class="p-5 flex justify-between items-center border-b">
-    <div class="flex-shrink-0">
-      <img src="/assets/logo.png" alt="logo" class="h-10" />
-    </div>
-    <button (click)="toggleSidebar()" aria-label="Close menu">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    </button>
+<div class="p-5 flex justify-between items-center border-b">
+  <div class="flex-shrink-0">
+    <img src="/assets/logo.png" alt="logo" class="h-10" />
   </div>
-  <ul class="flex flex-col p-5 gap-4 text-lg">
-    <li
-      (click)="toggleSidebar()"
-      routerLink="/"
-      routerLinkActive=""
-      [routerLinkActiveOptions]="{ exact: true }"
-      class="cursor-pointer hover:text-active-link"
+  <button (click)="toggleSidebar()" aria-label="Close menu">
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
     >
-      <span class="pi pi-home text-2xl me-2"></span>
-      Home
-    </li>
-    <li
-      (click)="toggleSidebar()"
-      routerLink="/services"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
-    >
-      <span class="pi pi-briefcase text-2xl me-2"></span>
-      Services
-    </li>
-    <li
-      (click)="toggleSidebar()"
-      routerLink="/projects"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
-    >
-      <span class="pi pi-images text-2xl me-2"></span>
-      Projects
-    </li>
-    <li
-      (click)="toggleSidebar()"
-      routerLink="/interior-light"
-      routerLinkActive="text-active-link"
-      class="cursor-pointer hover:text-active-link"
-    >
-      <span class="pi pi-lightbulb text-2xl me-2"></span>
-      Interior light
-    </li>
-    <li
-      (click)="toggleSidebar()"
+    <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+</button>
+</div>
+<ul class="flex flex-col p-5 gap-4 text-lg">
+  <li
+  (click)="toggleSidebar()"
+  routerLink="/"
+  routerLinkActive=""
+  [routerLinkActiveOptions]="{ exact: true }"
+  class="cursor-pointer hover:text-active-link"
+  >
+  <span class="pi pi-home text-2xl me-2"></span>
+  Home
+</li>
+<li
+(click)="toggleSidebar()"
+routerLink="/services"
+routerLinkActive="text-active-link"
+class="cursor-pointer hover:text-active-link"
+>
+<span class="pi pi-briefcase text-2xl me-2"></span>
+Services
+</li>
+<li
+(click)="toggleSidebar()"
+routerLink="/projects"
+routerLinkActive="text-active-link"
+class="cursor-pointer hover:text-active-link"
+>
+<span class="pi pi-images text-2xl me-2"></span>
+Projects
+</li>
+<li
+(click)="toggleSidebar()"
+routerLink="/interior-light"
+routerLinkActive="text-active-link"
+class="cursor-pointer hover:text-active-link"
+>
+<span class="pi pi-lightbulb text-2xl me-2"></span>
+Interior light
+</li>
+<li
+(click)="toggleSidebar()"
       routerLink="/contact"
       routerLinkActive="text-active-link"
       class="cursor-pointer hover:text-active-link"
-    >
+      >
       <span class="pi pi-envelope text-2xl me-2"></span>
       Contact us
     </li>
@@ -154,7 +156,9 @@
 
 <!-- Backdrop -->
 <div
-  *ngIf="isSidebarOpen"
-  (click)="toggleSidebar()"
-  class="fixed inset-0 bg-black opacity-50 z-40"
+*ngIf="isSidebarOpen"
+(click)="toggleSidebar()"
+class="fixed inset-0 bg-black opacity-50 z-40"
 ></div>
+
+</section>
