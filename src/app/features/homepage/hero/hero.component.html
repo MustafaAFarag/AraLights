@@ -1,7 +1,16 @@
 <div
-  class="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
-  style="background-image: url('/assets/hero-background.jpg')"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
 >
+  <video
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    [attr.src]="'/assets/hero.mp4'"
+  >
+  </video>
   <div class="absolute inset-0 bg-black opacity-80"></div>
   <div
     class="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 text-center"
@@ -9,12 +18,13 @@
     <h1
       class="text-3xl sm:text-4xl md:text-[3.5rem] xl:text-[4.3rem] mb-4 sm:mb-6 font-kaisei font-medium leading-tight animate-title"
     >
-      <span class="word">Lighting</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">The</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">Extraordinary</span><br class="hidden sm:block" />
-      <span class="word">With</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">Artistic</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">Vision</span>
+    <span class="word">Lighting</span><span class="word-spacer">&nbsp;</span>
+    <span class="word">The</span><span class="word-spacer">&nbsp;</span>
+    <span class="word">Extraordinary</span><br class="hidden sm:block" />
+    <span class="word">With</span><span class="word-spacer">&nbsp;</span>
+    <span class="word">Artistic</span><span class="word-spacer">&nbsp;</span>
+    <span class="word">Vision</span>
+
     </h1>
 
     <p
