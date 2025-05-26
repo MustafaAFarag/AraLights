@@ -1,6 +1,8 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HeaderComponent } from '../../../components/header/header.component';
 import { CommonModule } from '@angular/common';
+import { register } from 'swiper/element/bundle';
+import { SwiperContainer, SwiperSlide } from 'swiper/element';
 
 interface Testimonial {
   text: string;
@@ -9,6 +11,9 @@ interface Testimonial {
   company: string;
   image: string;
 }
+
+// Register Swiper custom elements
+register();
 
 @Component({
   selector: 'app-testimonials',
