@@ -1,0 +1,36 @@
+.text-active-link {
+    position: relative;
+  }
+  
+  .text-active-link::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 0 6px 2px white;
+  }
+  
+  .text-active-link::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 28px;
+    background: radial-gradient(
+      ellipse at top,
+      #fff 0%,
+      rgba(255, 255, 255, 0.2) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    filter: blur(2px);
+  }
