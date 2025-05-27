@@ -130,6 +130,11 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Exclude hero overlay from global transition */
+.hero-overlay {
+  transition: none !important;
+}
+
 .max-w-8xl {
   max-width: 1400px;
 }
