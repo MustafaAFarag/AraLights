@@ -104,7 +104,7 @@ export class CompanyMapComponent implements OnInit {
           // Add marker
           L.marker([29.9723024, 31.2884523], { icon: customIcon })
             .addTo(this.map)
-            .bindPopup('Adwat Information Technology')
+            .bindPopup('Ara Contracting W.L.L')
             .openPopup();
 
           // Force a resize after initialization
