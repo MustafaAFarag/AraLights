@@ -7,17 +7,6 @@ import { isPlatformBrowser } from '@angular/common';
   imports: [],
   templateUrl: './company-map.component.html',
   styleUrl: './company-map.component.css',
-  styles: [
-    `
-      :host ::ng-deep .leaflet-container {
-        height: 500px;
-        width: 100%;
-        margin-top: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-    `,
-  ],
 })
 export class CompanyMapComponent implements OnInit {
   private map: any;
