@@ -1,4 +1,4 @@
-import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject, NgZone } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -23,7 +23,10 @@ export class CompanyMapComponent implements OnInit {
   private map: any;
   private mapInitialized = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private ngZone: NgZone
+  ) {}
 
   async ngOnInit(): Promise<void> {
     if (isPlatformBrowser(this.platformId)) {
@@ -39,7 +42,8 @@ export class CompanyMapComponent implements OnInit {
     if (this.mapInitialized) return;
 
     try {
-      const L = await import('leaflet');
+      // Import Leaflet in a way that works in production
+      const L = (await import('leaflet')).default;
 
       // Ensure the map container exists
       const mapContainer = document.getElementById('map');
@@ -48,79 +52,74 @@ export class CompanyMapComponent implements OnInit {
         return;
       }
 
-      // Initialize map with error handling
-      try {
-        this.map = L.map('map', {
-          center: [26.0667, 50.5577], // Bahrain coordinates
-          zoom: 15,
-          scrollWheelZoom: false,
-          dragging: true,
-          touchZoom: true,
-          doubleClickZoom: true,
-          zoomControl: true,
-        });
-
-        // Add tile layer with error handling
+      // Run map initialization inside NgZone
+      this.ngZone.runOutsideAngular(() => {
         try {
+          // Initialize map
+          this.map = new L.Map('map', {
+            center: [29.9723024, 31.2884523], // Adwat Information Technology coordinates
+            zoom: 15,
+            scrollWheelZoom: false,
+            dragging: true,
+            touchZoom: true,
+            doubleClickZoom: true,
+            zoomControl: true,
+          });
+
+          // Add tile layer
           L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution:
               '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 19,
           }).addTo(this.map);
-        } catch (tileError) {
-          console.error('Failed to add tile layer:', tileError);
-        }
 
-        // Create custom marker icon
-        const customIcon = L.divIcon({
-          className: 'custom-marker',
-          html: `<div style="
-            background-color: #3388ff;
-            width: 25px;
-            height: 41px;
-            border-radius: 50% 50% 50% 0;
-            transform: rotate(-45deg);
-            position: relative;
-            margin-left: 12px;
-            margin-top: 20px;
-          ">
-            <div style="
-              background-color: white;
-              width: 11px;
-              height: 11px;
-              border-radius: 50%;
-              position: absolute;
-              top: 15px;
-              left: 7px;
-            "></div>
-          </div>`,
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-        });
+          // Create custom marker icon
+          const customIcon = L.divIcon({
+            className: 'custom-marker',
+            html: `<div style="
+              background-color: #3388ff;
+              width: 25px;
+              height: 41px;
+              border-radius: 50% 50% 50% 0;
+              transform: rotate(-45deg);
+              position: relative;
+              margin-left: 12px;
+              margin-top: 20px;
+            ">
+              <div style="
+                background-color: white;
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                position: absolute;
+                top: 15px;
+                left: 7px;
+              "></div>
+            </div>`,
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+          });
 
-        // Add marker with error handling
-        try {
-          L.marker([26.0667, 50.5577], { icon: customIcon })
+          // Add marker
+          L.marker([29.9723024, 31.2884523], { icon: customIcon })
             .addTo(this.map)
-            .bindPopup('Ara Contracting W.L.L')
+            .bindPopup('Adwat Information Technology')
             .openPopup();
-        } catch (markerError) {
-          console.error('Failed to add marker:', markerError);
+
+          // Force a resize after initialization
+          setTimeout(() => {
+            if (this.map) {
+              this.map.invalidateSize();
+            }
+          }, 100);
+
+          this.mapInitialized = true;
+        } catch (error) {
+          console.error('Map initialization error:', error);
+          throw error;
         }
-
-        // Force a resize after initialization
-        setTimeout(() => {
-          if (this.map) {
-            this.map.invalidateSize();
-          }
-        }, 100);
-
-        this.mapInitialized = true;
-      } catch (mapError) {
-        console.error('Failed to create map:', mapError);
-        throw mapError;
-      }
+      });
     } catch (error) {
       console.error('Error loading Leaflet:', error);
       throw error;
