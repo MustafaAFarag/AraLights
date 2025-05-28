@@ -5,46 +5,16 @@
     <ul
       class="bg-[#141414] rounded-full px-2 sm:px-4 md:px-6 py-1 sm:py-2 shadow-lg flex flex-wrap justify-center gap-1 sm:gap-2 lg:gap-4"
     >
-      <li class="relative">
+      <li *ngFor="let item of items; let i = index" class="relative">
         <button
-          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-active-link"
+          (click)="activeIndex = i"
+          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 cursor-pointer"
+          [ngClass]="{
+            'text-secondary-text': activeIndex !== i,
+            'text-active-link': activeIndex === i
+          }"
         >
-          Interior
-        </button>
-      </li>
-      <li>
-        <button
-          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
-        >
-          Interior
-        </button>
-      </li>
-      <li>
-        <button
-          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
-        >
-          Interior
-        </button>
-      </li>
-      <li>
-        <button
-          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
-        >
-          Interior
-        </button>
-      </li>
-      <li>
-        <button
-          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
-        >
-          Interior
-        </button>
-      </li>
-      <li>
-        <button
-          class="px-2 sm:px-3 md:px-5 py-1 sm:py-2 rounded-full font-medium text-sm sm:text-base md:text-lg shadow hover:text-yellow-400 text-secondary-text"
-        >
-          Interior
+          {{ item }}
         </button>
       </li>
     </ul>

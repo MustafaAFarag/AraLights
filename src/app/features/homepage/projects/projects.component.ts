@@ -19,6 +19,15 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 })
 export class ProjectsComponent implements AfterViewInit, OnDestroy {
   slides = new Array(9); // Example slide list
+  activeIndex = 0;
+  items = [
+    'Interior',
+    'Interior',
+    'Interior',
+    'Interior',
+    'Interior',
+    'Interior',
+  ];
   private flickityInstance: any;
 
   @ViewChild('flickityContainer', { static: false })
