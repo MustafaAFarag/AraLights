@@ -10,7 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
   styles: [
     `
       :host ::ng-deep .leaflet-container {
-        height: 400px;
+        height: 500px;
         width: 100%;
         margin-top: 20px;
         border-radius: 8px;
