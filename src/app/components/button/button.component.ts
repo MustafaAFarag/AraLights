@@ -13,4 +13,5 @@ export class ButtonComponent {
   @Input() variant: 'primary' | 'secondary' = 'primary';
   @Input() icon: string = '/assets/arrow-right.png';
   @Input() iconAlt: string = 'arrow-right';
+  @Input() fullWidth: boolean = false;
 }
