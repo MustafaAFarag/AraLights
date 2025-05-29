@@ -18,7 +18,7 @@ export class OurServicesComponent {
   services: ServiceItem[] = [
     {
       title: 'Facade light systems',
-      icon: '/assets/icon1.png',
+      icon: '/assets/facade.png',
       description:
         'Innovative facade lighting systems that enhance architectural features and create stunning visual displays for buildings and structures.',
     },
@@ -36,7 +36,7 @@ export class OurServicesComponent {
     },
     {
       title: 'Aviation light',
-      icon: '/assets/icon4.png',
+      icon: '/assets/aviation.png',
       description:
         'Specialized aviation lighting systems that meet international standards for safety and visibility in airfields and related facilities.',
     },
