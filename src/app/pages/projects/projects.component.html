@@ -1,7 +1,7 @@
 <section>
   <div
     class="relative py-44 bg-cover bg-center bg-no-repeat flex items-center justify-center"
-    style="background-image: url('assets/projects-hero.jpg')"
+    style="background-image: url('assets/webps/projects-hero.webp')"
   >
     <div class="absolute inset-0 bg-black/50 opacity-80"></div>
     <app-section-header title="Ara Projects"></app-section-header>
@@ -33,13 +33,21 @@
       >
         <div class="relative">
           <div class="absolute inset-0 bg-black/50 opacity-80"></div>
-          <img
-            src="assets/projects-image.jpg"
-            alt="Al Yasmen Tower Project - Professional lighting installation"
-            class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[690px] object-cover rounded-b-lg"
-            width="1200"
-            height="800"
-          />
+          <picture>
+            <source
+              srcset="assets/webps/projects-image.webp"
+              type="image/webp"
+            />
+            <img
+              src="assets/projects-image.jpg"
+              alt="Al Yasmen Tower Project - Professional lighting installation"
+              class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[690px] object-cover rounded-b-lg"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </div>
         <div
           class="justify-between items-center flex flex-col md:flex-row px-4 sm:px-6 py-4"
@@ -55,11 +63,19 @@
               coast of the Kingdom.</span
             >
           </div>
-          <img
-            src="assets/arrow-upright.png"
-            alt="arrow-right"
-            class="hidden md:block w-10 h-10 mt-0 ms-10"
-          />
+          <picture>
+            <source
+              srcset="assets/webps/arrow-upright.webp"
+              type="image/webp"
+            />
+            <img
+              src="assets/arrow-upright.png"
+              alt="arrow-right"
+              class="hidden md:block w-10 h-10 mt-0 ms-10"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </div>
       </div>
       }

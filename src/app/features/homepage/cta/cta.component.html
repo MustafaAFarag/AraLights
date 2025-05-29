@@ -2,11 +2,19 @@
   <div
     class="absolute inset-0 flex justify-center items-center pointer-events-none"
   >
-    <img
-      src="/assets/rectangle-background.png"
-      alt="cta-bg"
-      class="object-contain opacity-60"
-    />
+    <picture>
+      <source
+        srcset="/assets/webps/rectangle-background.webp"
+        type="image/webp"
+      />
+      <img
+        src="/assets/rectangle-background.png"
+        alt="cta-bg"
+        class="object-contain opacity-60"
+        loading="lazy"
+        decoding="async"
+      />
+    </picture>
   </div>
   <h2
     class="text-center text-4xl sm:text-6xl md:text-8xl lg:text-[8.125rem] font-kaisei font-medium relative z-10 mb-6 md:mb-10"
@@ -19,13 +27,13 @@
     <app-button
       text="Get In Touch"
       variant="primary"
-      icon="/assets/arrow-right.png"
+      icon="/assets/webps/arrow-right.webp"
       iconAlt="arrow-right"
     ></app-button>
     <app-button
       text="Download Portfolio"
       variant="secondary"
-      icon="/assets/arrow-right-white.png"
+      icon="/assets/webps/arrow-right-white.webp"
       iconAlt="arrow-right"
     ></app-button>
   </div>

@@ -1,7 +1,7 @@
 <section>
   <div
     class="relative py-44 bg-cover bg-center bg-no-repeat flex items-center justify-center"
-    style="background-image: url('assets/aboutus-hero.jpg')"
+    style="background-image: url('assets/webps/aboutus-hero.webp')"
   >
     <div class="absolute inset-0 bg-black/50 opacity-80"></div>
     <app-section-header title="About Us"></app-section-header>
@@ -40,13 +40,21 @@
       </p>
     </div>
     <div class="w-full lg:w-1/2">
-      <img
-        src="/assets/straight-aboutus.png"
-        alt="About Aralights - Professional lighting solutions"
-        class="w-full h-3/4"
-        width="800"
-        height="600"
-      />
+      <picture>
+        <source
+          srcset="/assets/webps/straight-aboutus.webp"
+          type="image/webp"
+        />
+        <img
+          src="/assets/straight-aboutus.png"
+          alt="About Aralights - Professional lighting solutions"
+          class="w-full h-3/4"
+          width="800"
+          height="600"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
     </div>
   </main>
 </section>

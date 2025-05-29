@@ -29,28 +29,48 @@
     <!-- Right Column - Image Grid -->
     <div class="w-full flex flex-col items-center">
       <div class="flex w-full justify-center">
-        <img
-          src="/assets/top-left.png"
-          alt="Corridor with linear lighting design"
-          class="w-1/2 md:w-[280px] md:h-[230px] lg:w-[280px] lg:h-[240px] object-cover"
-        />
-        <img
-          src="/assets/top-right.png"
-          alt="Corridor with linear lighting design"
-          class="w-1/2 md:w-[200px] md:h-[240px] lg:w-[210px] lg:h-[250px] object-cover -translate-y-12 lg:-translate-y-22"
-        />
+        <picture>
+          <source srcset="/assets/webps/top-left.webp" type="image/webp" />
+          <img
+            src="/assets/top-left.png"
+            alt="Corridor with linear lighting design"
+            class="w-1/2 md:w-[280px] md:h-[230px] lg:w-[280px] lg:h-[240px] object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <picture>
+          <source srcset="/assets/webps/top-right.webp" type="image/webp" />
+          <img
+            src="/assets/top-right.png"
+            alt="Corridor with linear lighting design"
+            class="w-1/2 md:w-[200px] md:h-[240px] lg:w-[210px] lg:h-[250px] object-cover -translate-y-12 lg:-translate-y-22"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </div>
       <div class="flex w-full justify-center">
-        <img
-          src="/assets/bottom-left.png"
-          alt="Corridor with linear lighting design"
-          class="w-1/2 md:w-[200px] md:h-[240px] lg:w-[210px] lg:h-[250px] object-cover"
-        />
-        <img
-          src="/assets/bottom-right.png"
-          alt="Corridor with linear lighting design"
-          class="w-1/2 md:w-[280px] md:h-[230px] lg:w-[290px] lg:h-[240px] object-cover -translate-y-12 lg:-translate-y-22"
-        />
+        <picture>
+          <source srcset="/assets/webps/bottom-left.webp" type="image/webp" />
+          <img
+            src="/assets/bottom-left.png"
+            alt="Corridor with linear lighting design"
+            class="w-1/2 md:w-[200px] md:h-[240px] lg:w-[210px] lg:h-[250px] object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <picture>
+          <source srcset="/assets/webps/bottom-right.webp" type="image/webp" />
+          <img
+            src="/assets/bottom-right.png"
+            alt="Corridor with linear lighting design"
+            class="w-1/2 md:w-[280px] md:h-[230px] lg:w-[290px] lg:h-[240px] object-cover -translate-y-12 lg:-translate-y-22"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </div>
     </div>
   </div>
