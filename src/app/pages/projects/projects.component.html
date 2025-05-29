@@ -20,6 +20,8 @@
               'text-secondary-text': activeIndex !== i,
               'text-active-link': activeIndex === i
             }"
+            [attr.aria-label]="'Filter by ' + item"
+            [attr.aria-pressed]="activeIndex === i"
           >
             {{ item }}
           </button>
