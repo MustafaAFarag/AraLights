@@ -1,5 +1,8 @@
-<section class="bg-secondary-bg py-16">
-  <app-header title="Projects"></app-header>
+<section
+  class="bg-secondary-bg py-16"
+  [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'"
+>
+  <app-header [title]="'homepage.projects.title' | translate"></app-header>
 
   <nav class="flex justify-center mt-8 mb-10">
     <ul
@@ -13,10 +16,10 @@
             'text-secondary-text': activeIndex !== i,
             'text-active-link': activeIndex === i
           }"
-          [attr.aria-label]="'Filter by ' + item"
+          [attr.aria-label]="'Filter by ' + (item | translate)"
           [attr.aria-pressed]="activeIndex === i"
         >
-          {{ item }}
+          {{ item | translate }}
         </button>
       </li>
     </ul>
@@ -43,14 +46,26 @@
             <div class="justify-between items-center hidden md:flex">
               <div class="flex-col gap-2 z-10 font-kaisei flex">
                 <span class="text-lg md:text-xl font-medium">
-                  Project : Al Yasmen Tower
+                  {{ "homepage.projects.project.title" | translate }} :
+                  {{
+                    "homepage.projects.project.details.alYasmenTower.name"
+                      | translate
+                  }}
                 </span>
-                <span class="text-base md:text-lg">Client : Amr Nasser</span>
-                <span class="text-base"
-                  >Location : center of the Arabian Gulf between latitudes 25.32
-                  and 26.20 north and longitude 50.20 and 50.50 east, near the
-                  east coast of the Kingdom .</span
-                >
+                <span class="text-base md:text-lg">
+                  {{ "homepage.projects.project.client" | translate }} :
+                  {{
+                    "homepage.projects.project.details.alYasmenTower.client"
+                      | translate
+                  }}
+                </span>
+                <span class="text-base">
+                  {{ "homepage.projects.project.location" | translate }} :
+                  {{
+                    "homepage.projects.project.details.alYasmenTower.location"
+                      | translate
+                  }}
+                </span>
               </div>
               <img
                 src="assets/arrow-upright.png"

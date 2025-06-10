@@ -6,34 +6,39 @@ import {
   OnDestroy,
   PLATFORM_ID,
   Inject,
+  OnInit,
 } from '@angular/core';
 import { HeaderComponent } from '../../../components/header/header.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [HeaderComponent, CommonModule],
+  imports: [CommonModule, HeaderComponent, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
-export class ProjectsComponent implements AfterViewInit, OnDestroy {
+export class ProjectsComponent implements AfterViewInit, OnDestroy, OnInit {
   slides = new Array(9); // Example slide list
   activeIndex = 0;
   items = [
-    'Interior',
-    'Interior',
-    'Interior',
-    'Interior',
-    'Interior',
-    'Interior',
+    'homepage.projects.filters.all',
+    'homepage.projects.filters.facade',
+    'homepage.projects.filters.interior',
+    'homepage.projects.filters.landscape',
+    'homepage.projects.filters.aviation',
   ];
   private flickityInstance: any;
 
   @ViewChild('flickityContainer', { static: false })
   flickityContainer!: ElementRef;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public languageService: LanguageService
+  ) {}
 
   async ngAfterViewInit() {
     // Only initialize Flickity in browser environment
@@ -100,5 +105,9 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
     if (this.flickityInstance) {
       this.flickityInstance.destroy();
     }
+  }
+
+  ngOnInit() {
+    // Initialize Flickity here if needed
   }
 }
