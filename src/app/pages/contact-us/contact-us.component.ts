@@ -3,6 +3,7 @@ import { SectionHeaderComponent } from '../../components/section-header/section-
 import { FormComponent } from '../../features/contact-us/form/form.component';
 import { CtaComponent } from '../../features/homepage/cta/cta.component';
 import { CompanyMapComponent } from '../../features/contact-us/company-map/company-map.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,6 +12,7 @@ import { CompanyMapComponent } from '../../features/contact-us/company-map/compa
     FormComponent,
     CtaComponent,
     CompanyMapComponent,
+    TranslateModule,
   ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css',

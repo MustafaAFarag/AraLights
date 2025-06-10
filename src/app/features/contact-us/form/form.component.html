@@ -1,56 +1,68 @@
 <h3 class="text-4xl font-medium text-center font-kaisei mb-8">
-  Contact With Us
+  {{ "contactUs.form.title" | translate }}
 </h3>
 <form
   class="flex flex-col space-y-8 border-2 border-gray-500 rounded-lg p-8 bg-secondary-bg"
 >
   <div class="flex flex-col gap-2">
-    <label for="name" class="text-lg font-medium">Full Name</label>
+    <label for="name" class="text-lg font-medium">{{
+      "contactUs.form.fields.fullName.label" | translate
+    }}</label>
     <input
       type="text"
       class="border-2 bg-primary-bg border-gray-500 rounded-lg p-2 placeholder:text-gray-400"
-      placeholder="Fahd bn salem"
+      [placeholder]="'contactUs.form.fields.fullName.placeholder' | translate"
     />
   </div>
   <div class="flex flex-col gap-2">
-    <label for="email" class="text-lg font-medium">Email</label>
+    <label for="email" class="text-lg font-medium">{{
+      "contactUs.form.fields.email.label" | translate
+    }}</label>
     <input
       type="email"
       class="border-2 bg-primary-bg border-gray-500 rounded-lg p-2 placeholder:text-gray-400"
-      placeholder="Aralight@gmail.com"
+      [placeholder]="'contactUs.form.fields.email.placeholder' | translate"
     />
   </div>
   <div class="flex flex-col gap-2">
-    <label for="phone" class="text-lg font-medium">Phone Number</label>
+    <label for="phone" class="text-lg font-medium">{{
+      "contactUs.form.fields.phone.label" | translate
+    }}</label>
     <input
       type="tel"
       maxlength="11"
       inputmode="numeric"
       pattern="[0-9]{10,15}"
       class="border-2 bg-primary-bg border-gray-500 rounded-lg p-2 placeholder:text-gray-400"
-      placeholder="01087643386"
+      [placeholder]="'contactUs.form.fields.phone.placeholder' | translate"
     />
   </div>
   <div class="flex flex-col gap-2">
-    <label for="position" class="text-lg font-medium">Position</label>
+    <label for="position" class="text-lg font-medium">{{
+      "contactUs.form.fields.position.label" | translate
+    }}</label>
     <input
       type="text"
       class="border-2 bg-primary-bg border-gray-500 rounded-lg p-2 placeholder:text-gray-400"
-      placeholder="CEO"
+      [placeholder]="'contactUs.form.fields.position.placeholder' | translate"
     />
   </div>
   <div class="flex flex-col gap-2">
-    <label for="company" class="text-lg font-medium">Company Name</label>
+    <label for="company" class="text-lg font-medium">{{
+      "contactUs.form.fields.company.label" | translate
+    }}</label>
     <input
       type="text"
       class="border-2 bg-primary-bg border-gray-500 rounded-lg p-2 placeholder:text-gray-400"
-      placeholder="Aralight"
+      [placeholder]="'contactUs.form.fields.company.placeholder' | translate"
     />
   </div>
 
   <!-- Upload File Field -->
   <div class="flex flex-col gap-2">
-    <label for="file" class="text-lg font-medium">Upload file</label>
+    <label for="file" class="text-lg font-medium">{{
+      "contactUs.form.fields.file.label" | translate
+    }}</label>
     <div class="flex items-center gap-4">
       <input
         type="file"
@@ -62,7 +74,7 @@
         class="border-2 cursor-pointer flex gap-7 border-gray-500 rounded-full items-center px-10 py-2 text-white bg-transparent hover:bg-gray-700 transition"
         aria-label="Upload file"
       >
-        Upload
+        {{ "contactUs.form.fields.file.button" | translate }}
         <img src="assets/upload-icon.png" alt="upload-file" class="w-6 h-6" />
       </button>
     </div>
@@ -70,17 +82,19 @@
 
   <!-- Message Field -->
   <div class="flex flex-col gap-2">
-    <label for="message" class="text-lg font-medium">Message</label>
+    <label for="message" class="text-lg font-medium">{{
+      "contactUs.form.fields.message.label" | translate
+    }}</label>
     <textarea
       id="message"
       rows="8"
       class="border-2 bg-primary-bg border-gray-500 rounded-lg p-2 placeholder:text-gray-400"
-      placeholder="Type your message here..."
+      [placeholder]="'contactUs.form.fields.message.placeholder' | translate"
     ></textarea>
   </div>
 
   <app-button
-    text="Submit"
+    [text]="'contactUs.form.submit' | translate"
     variant="primary"
     icon="/assets/arrow-right.png"
     iconAlt="arrow-right"

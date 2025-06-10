@@ -148,5 +148,50 @@
         }
       }
     }
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "form": {
+      "title": "Contact With Us",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Fahd bn salem"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Aralight@gmail.com"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "01087643386"
+        },
+        "position": {
+          "label": "Position",
+          "placeholder": "CEO"
+        },
+        "company": {
+          "label": "Company Name",
+          "placeholder": "Aralight"
+        },
+        "file": {
+          "label": "Upload file",
+          "button": "Upload"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Type your message here..."
+        }
+      },
+      "submit": "Submit"
+    },
+    "map": {
+      "title": "Our Location & <br /> Connection info",
+      "description": "We'd love to hear from you. Whether you have a question about our services, need assistance, or just want to get in touch — we're here to help.",
+      "companyName": "Company Name: Ara Contracting W.L.L",
+      "address": "Address: pt. 1252, Building 2420, Road 2831 Complex 428, Seef Area, Bahrain For general inquiries or business communication.",
+      "email": "Email: r.abdullah@ara-lighting.com",
+      "contactPerson": "Authorized Contact: Mr. Rami Abdullah Ali"
+    }
   }
 }

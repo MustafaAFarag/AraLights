@@ -1,10 +1,11 @@
 import { Component, OnInit, PLATFORM_ID, Inject, NgZone } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-company-map',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './company-map.component.html',
   styleUrl: './company-map.component.css',
 })
