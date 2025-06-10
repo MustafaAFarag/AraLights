@@ -1,7 +1,7 @@
 /* Custom CSS for overlapping effect */
 @media (min-width: 768px) {
   :host ::ng-deep .flex > div:not(:first-child) {
-    margin-left: -2.5rem;
+    margin-inline-start: -2.5rem;
   }
 }
 

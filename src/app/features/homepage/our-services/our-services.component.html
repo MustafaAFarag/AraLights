@@ -1,28 +1,37 @@
-<section class="py-16 text-white">
+<section
+  class="py-16 text-white"
+  [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'"
+>
   <div class="mx-auto px-4">
     <!-- Section Header -->
-    <app-header title="Our Services"></app-header>
+    <app-header [title]="'homepage.ourServices.title' | translate"></app-header>
 
     <!-- Services Circles -->
     <div
       class="flex flex-wrap justify-center items-center gap-5 md:gap-12 lg:gap-16"
     >
       @for (service of services; track service.title) {
-      <div class="relative px-4 sm:px-6 md:px-0 md:mx-3 lg:mx-0 lg:px-0">
+      <div
+        class="relative ps-4 pe-4 sm:ps-6 sm:pe-6 md:ps-0 md:pe-0 md:ms-3 md:me-3 lg:ms-0 lg:me-0 lg:ps-0 lg:pe-0"
+      >
         <div class="rounded-full bg-gray-600 service-circle">
           <div
             class="rounded-full bg-[#1a1a1a] p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-56 lg:h-56"
           >
             <!-- Icon -->
             <div class="text-white">
-              <img [src]="service.icon" alt="Service Icon" class="" />
+              <img
+                [src]="service.icon"
+                [alt]="service.title | translate"
+                class=""
+              />
             </div>
 
             <!-- Title -->
             <h3
               class="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-kaisei mt-2"
             >
-              {{ service.title }}
+              {{ service.title | translate }}
             </h3>
           </div>
         </div>

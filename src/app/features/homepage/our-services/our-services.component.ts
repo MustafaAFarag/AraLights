@@ -1,50 +1,50 @@
 import { Component } from '@angular/core';
-import { LucideAngularModule, FileIcon, LucideIconData } from 'lucide-angular';
+import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../../components/header/header.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../../../services/language.service';
 
 interface ServiceItem {
   title: string;
   icon: string;
-  description?: string;
+  description: string;
 }
 
 @Component({
   selector: 'app-our-services',
-  imports: [LucideAngularModule, HeaderComponent],
+  standalone: true,
+  imports: [CommonModule, HeaderComponent, TranslateModule],
   templateUrl: './our-services.component.html',
   styleUrl: './our-services.component.css',
 })
 export class OurServicesComponent {
   services: ServiceItem[] = [
     {
-      title: 'Facade light systems',
+      title: 'homepage.ourServices.services.facadeLight.title',
       icon: '/assets/facade.png',
-      description:
-        'Innovative facade lighting systems that enhance architectural features and create stunning visual displays for buildings and structures.',
+      description: 'homepage.ourServices.services.facadeLight.description',
     },
     {
-      title: 'Interior Light',
+      title: 'homepage.ourServices.services.interiorLight.title',
       icon: '/assets/icon2.png',
-      description:
-        'Custom interior lighting solutions that combine functionality with aesthetic appeal, creating perfect ambiance for any space.',
+      description: 'homepage.ourServices.services.interiorLight.description',
     },
     {
-      title: 'Landing scape',
+      title: 'homepage.ourServices.services.landscape.title',
       icon: '/assets/icon3.png',
-      description:
-        'Landscape lighting designs that transform outdoor environments, highlighting natural features and ensuring safety and security.',
+      description: 'homepage.ourServices.services.landscape.description',
     },
     {
-      title: 'Aviation light',
+      title: 'homepage.ourServices.services.aviationLight.title',
       icon: '/assets/aviation.png',
-      description:
-        'Specialized aviation lighting systems that meet international standards for safety and visibility in airfields and related facilities.',
+      description: 'homepage.ourServices.services.aviationLight.description',
     },
     {
-      title: 'Airport & Helicopter lighting',
+      title: 'homepage.ourServices.services.airportLight.title',
       icon: '/assets/icon5.png',
-      description:
-        'Comprehensive lighting solutions for airports and heliports, including runway, taxiway, and approach lighting systems.',
+      description: 'homepage.ourServices.services.airportLight.description',
     },
   ];
+
+  constructor(public languageService: LanguageService) {}
 }

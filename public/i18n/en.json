@@ -38,6 +38,31 @@
       "title": "About Us",
       "heading": "Lighting the Future with Precision and Creativity",
       "description": "ARA Lighting is part of the leading ARA Group, originally founded with American roots. Established in 2020 and headquartered in Bahrain, ARA Lighting is a specialist in advanced lighting solutions across the Gulf and international markets."
+    },
+    "ourServices": {
+      "title": "Our Services",
+      "services": {
+        "facadeLight": {
+          "title": "Facade light systems",
+          "description": "Innovative facade lighting systems that enhance architectural features and create stunning visual displays for buildings and structures."
+        },
+        "interiorLight": {
+          "title": "Interior Light",
+          "description": "Custom interior lighting solutions that combine functionality with aesthetic appeal, creating perfect ambiance for any space."
+        },
+        "landscape": {
+          "title": "Landing scape",
+          "description": "Landscape lighting designs that transform outdoor environments, highlighting natural features and ensuring safety and security."
+        },
+        "aviationLight": {
+          "title": "Aviation light",
+          "description": "Specialized aviation lighting systems that meet international standards for safety and visibility in airfields and related facilities."
+        },
+        "airportLight": {
+          "title": "Airport & Helicopter lighting",
+          "description": "Comprehensive lighting solutions for airports and heliports, including runway, taxiway, and approach lighting systems."
+        }
+      }
     }
   }
 }
