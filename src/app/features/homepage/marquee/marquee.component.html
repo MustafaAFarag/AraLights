@@ -1,9 +1,12 @@
-<div class="marquee-container">
+<div
+  class="marquee-container"
+  [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'"
+>
   <div class="marquee">
     <ul>
       <li>
         <div class="text-track font-medium font-kaisei text-8xl">
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -14,7 +17,7 @@
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
           </svg>
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -25,7 +28,7 @@
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
           </svg>
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -36,7 +39,7 @@
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
           </svg>
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -53,7 +56,7 @@
     <ul aria-hidden="true">
       <li>
         <div class="text-track font-medium font-kaisei text-8xl">
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -64,7 +67,7 @@
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
           </svg>
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -75,7 +78,7 @@
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
           </svg>
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"
@@ -86,7 +89,7 @@
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
           </svg>
-          Visionary with Artistic Vision
+          {{ "homepage.marquee.text" | translate }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="130"

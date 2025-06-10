@@ -65,3 +65,17 @@ svg {
     transform: translateX(calc(-100%));
   }
 }
+
+/* RTL Animation */
+[dir="rtl"] .text-track {
+  animation: scroll-rtl 30s linear infinite;
+}
+
+@keyframes scroll-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
