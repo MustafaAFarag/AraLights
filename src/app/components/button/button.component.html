@@ -11,5 +11,12 @@
   "
 >
   {{ text }}
-  <img [src]="icon" [alt]="iconAlt" class="w-4 sm:w-5" />
+  <img
+    [src]="icon"
+    [alt]="iconAlt"
+    class="w-4 sm:w-5"
+    [ngClass]="
+      languageService.getCurrentLanguage() === 'ar' ? 'rotate-180' : ''
+    "
+  />
 </button>
