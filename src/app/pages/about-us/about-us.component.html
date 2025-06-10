@@ -12,12 +12,7 @@
   <main
     class="flex flex-col lg:flex-row max-w-8xl mx-auto py-16 md:py-24 lg:py-32 gap-8 lg:gap-12 px-4 md:px-6 lg:px-8"
   >
-    <div
-      class="w-full lg:w-1/2"
-      [ngClass]="{
-        'lg:order-2': languageService.getCurrentLanguage() === 'ar'
-      }"
-    >
+    <div class="w-full lg:w-1/2">
       <h2 class="font-medium font-kaisei text-3xl md:text-4xl mb-4">
         {{ "aboutUs.heading" | translate }}
       </h2>
