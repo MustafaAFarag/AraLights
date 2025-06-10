@@ -17,17 +17,30 @@ export class LanguageService {
     private translate: TranslateService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    this.initializeLanguage();
-  }
+    // Set default language
+    this.translate.setDefaultLang(this.DEFAULT_LANGUAGE);
 
-  private initializeLanguage(): void {
-    const savedLanguage = this.getStoredLanguage() || this.DEFAULT_LANGUAGE;
-    this.setLanguage(savedLanguage);
+    // Initialize with stored language or default
+    const savedLanguage = this.getStoredLanguage();
+    if (savedLanguage) {
+      // First load the translations
+      this.translate.getTranslation(savedLanguage).subscribe(() => {
+        // Then set the language
+        this.translate.use(savedLanguage).subscribe(() => {
+          console.log('Language initialized with:', savedLanguage);
+          this.setLanguage(savedLanguage);
+        });
+      });
+    } else {
+      this.setLanguage(this.DEFAULT_LANGUAGE);
+    }
   }
 
   private getStoredLanguage(): string | null {
     if (isPlatformBrowser(this.platformId)) {
-      return localStorage.getItem(this.LANGUAGE_KEY);
+      const lang = localStorage.getItem(this.LANGUAGE_KEY);
+      console.log('Stored language:', lang);
+      return lang;
     }
     return null;
   }
@@ -35,23 +48,33 @@ export class LanguageService {
   private setStoredLanguage(lang: string): void {
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem(this.LANGUAGE_KEY, lang);
+      console.log('Language stored:', lang);
     }
   }
 
   setLanguage(lang: string): void {
-    this.translate.use(lang);
-    this.setStoredLanguage(lang);
+    console.log('Setting language to:', lang);
+    // First load the translations
+    this.translate.getTranslation(lang).subscribe(() => {
+      // Then set the language
+      this.translate.use(lang).subscribe(() => {
+        console.log('Language changed to:', lang);
+        this.setStoredLanguage(lang);
 
-    // Set RTL based on language
-    const isRTL = lang === 'ar';
-    this.isRTL.next(isRTL);
-    if (isPlatformBrowser(this.platformId)) {
-      document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
-      document.documentElement.lang = lang;
-    }
+        // Set RTL based on language
+        const isRTL = lang === 'ar';
+        this.isRTL.next(isRTL);
+        if (isPlatformBrowser(this.platformId)) {
+          document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+          document.documentElement.lang = lang;
+        }
+      });
+    });
   }
 
   getCurrentLanguage(): string {
-    return this.translate.currentLang;
+    const currentLang = this.translate.currentLang || this.DEFAULT_LANGUAGE;
+    console.log('Current language:', currentLang);
+    return currentLang;
   }
 }

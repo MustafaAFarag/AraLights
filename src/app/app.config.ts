@@ -21,7 +21,7 @@ import { HttpClient } from '@angular/common/http';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
   http: HttpClient
-) => new TranslateHttpLoader(http, './i18n/', '.json');
+) => new TranslateHttpLoader(http, '/i18n/', '.json');
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -43,6 +43,7 @@ export const appConfig: ApplicationConfig = {
           useFactory: httpLoaderFactory,
           deps: [HttpClient],
         },
+        defaultLanguage: 'en',
       }),
     ]),
   ],
