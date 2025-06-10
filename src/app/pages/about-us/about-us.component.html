@@ -1,45 +1,49 @@
-<section>
+<section [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'">
   <div
     class="relative py-44 bg-cover bg-center bg-no-repeat flex items-center justify-center"
     style="background-image: url('assets/webps/aboutus-hero.webp')"
   >
     <div class="absolute inset-0 bg-black/50 opacity-80"></div>
-    <app-section-header title="About Us"></app-section-header>
+    <app-section-header
+      [title]="'aboutUs.title' | translate"
+    ></app-section-header>
   </div>
 
   <main
     class="flex flex-col lg:flex-row max-w-8xl mx-auto py-16 md:py-24 lg:py-32 gap-8 lg:gap-12 px-4 md:px-6 lg:px-8"
   >
-    <div class="w-full lg:w-1/2">
+    <div
+      class="w-full lg:w-1/2"
+      [ngClass]="{
+        'lg:order-2': languageService.getCurrentLanguage() === 'ar'
+      }"
+    >
       <h2 class="font-medium font-kaisei text-3xl md:text-4xl mb-4">
-        Lighting the Future with <br />
-        Precision and Creativity
+        {{ "aboutUs.heading" | translate }}
       </h2>
       <p class="text-lg md:text-xl mb-6 lg:mb-8 font-light">
-        ARA Group is a dynamic, American-rooted organization headquartered in
-        Bahrain, operating across the Gulf region and expanding its influence
-        worldwide. Since its establishment in 2020, ARA Group has been committed
-        to leading innovation across multiple sectors, including lighting, real
-        estate, and contracting. Driven by a passion for excellence, creativity,
-        and sustainability, ARA Group has quickly grown into a trusted partner
-        for transformative urban and architectural development. Under the ARA
-        Group umbrella, three specialized companies operate with distinct but
-        complementary
+        {{ "aboutUs.description" | translate }}
       </p>
       <div class="mb-6 lg:mb-8 flex flex-col gap-2 font-light">
-        <h3 class="font-medium text-xl">Missions</h3>
+        <h3 class="font-medium text-xl">
+          {{ "aboutUs.missions.title" | translate }}
+        </h3>
         <ul class="list-disc list-inside ms-2 text-lg md:text-xl">
-          <li>ARA Lighting</li>
-          <li>ARA Real Estate</li>
-          <li>ARA Contracting</li>
+          <li>{{ "aboutUs.missions.items.lighting" | translate }}</li>
+          <li>{{ "aboutUs.missions.items.realEstate" | translate }}</li>
+          <li>{{ "aboutUs.missions.items.contracting" | translate }}</li>
         </ul>
       </div>
       <p class="text-lg md:text-xl font-light">
-        Together, they form a synergy that delivers integrated, forward-thinking
-        solutions for modern infrastructure and development projects.
+        {{ "aboutUs.conclusion" | translate }}
       </p>
     </div>
-    <div class="w-full lg:w-1/2">
+    <div
+      class="w-full lg:w-1/2"
+      [ngClass]="{
+        'lg:order-1': languageService.getCurrentLanguage() === 'ar'
+      }"
+    >
       <picture>
         <source
           srcset="/assets/webps/straight-aboutus.webp"
@@ -47,7 +51,7 @@
         />
         <img
           src="/assets/straight-aboutus.png"
-          alt="About Aralights - Professional lighting solutions"
+          [alt]="'aboutUs.title' | translate"
           class="w-full h-3/4"
           width="800"
           height="600"

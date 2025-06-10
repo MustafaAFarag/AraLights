@@ -18,5 +18,26 @@
     },
     "description": "We deliver fully integrated lighting solutions for facades, aviation, helipads, landscapes, and interior spaces — blending art and engineering for a stunning and safe visual experience.",
     "cta": "Get In Touch"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "heading": "Lighting the Future with Precision and Creativity",
+    "description": "ARA Group is a dynamic, American-rooted organization headquartered in Bahrain, operating across the Gulf region and expanding its influence worldwide. Since its establishment in 2020, ARA Group has been committed to leading innovation across multiple sectors, including lighting, real estate, and contracting. Driven by a passion for excellence, creativity, and sustainability, ARA Group has quickly grown into a trusted partner for transformative urban and architectural development. Under the ARA Group umbrella, three specialized companies operate with distinct but complementary",
+    "missions": {
+      "title": "Missions",
+      "items": {
+        "lighting": "ARA Lighting",
+        "realEstate": "ARA Real Estate",
+        "contracting": "ARA Contracting"
+      }
+    },
+    "conclusion": "Together, they form a synergy that delivers integrated, forward-thinking solutions for modern infrastructure and development projects."
+  },
+  "homepage": {
+    "aboutUs": {
+      "title": "About Us",
+      "heading": "Lighting the Future with Precision and Creativity",
+      "description": "ARA Lighting is part of the leading ARA Group, originally founded with American roots. Established in 2020 and headquartered in Bahrain, ARA Lighting is a specialist in advanced lighting solutions across the Gulf and international markets."
+    }
   }
 }
