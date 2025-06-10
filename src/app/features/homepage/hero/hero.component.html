@@ -18,24 +18,27 @@
     <h1
       class="text-3xl sm:text-4xl md:text-[3.5rem] xl:text-[4.3rem] mb-4 sm:mb-6 font-kaisei font-medium leading-tight animate-title"
     >
-      <span class="word">Lighting</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">The</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">Extraordinary</span><br class="hidden sm:block" />
-      <span class="word">With</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">Artistic</span><span class="word-spacer">&nbsp;</span>
-      <span class="word">Vision</span>
+      <span class="word">{{ "hero.title.line1" | translate }}</span
+      ><span class="word-spacer">&nbsp;</span>
+      <span class="word">{{ "hero.title.line2" | translate }}</span
+      ><span class="word-spacer">&nbsp;</span>
+      <span class="word">{{ "hero.title.line3" | translate }}</span
+      ><br class="hidden sm:block" />
+      <span class="word">{{ "hero.title.line4" | translate }}</span
+      ><span class="word-spacer">&nbsp;</span>
+      <span class="word">{{ "hero.title.line5" | translate }}</span
+      ><span class="word-spacer">&nbsp;</span>
+      <span class="word">{{ "hero.title.line6" | translate }}</span>
     </h1>
 
     <p
       class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-[758px] mx-auto font-normal px-4 sm:px-0 animate-description"
     >
-      We deliver fully integrated lighting solutions for facades, aviation,
-      helipads, landscapes, and interior spaces — blending art and engineering
-      for a stunning and safe visual experience.
+      {{ "hero.description" | translate }}
     </p>
     <div class="flex justify-center items-center">
       <app-button
-        text="Get In Touch"
+        [text]="'hero.cta' | translate"
         variant="primary"
         icon="/assets/webps/arrow-right.webp"
         iconAlt="arrow-right"

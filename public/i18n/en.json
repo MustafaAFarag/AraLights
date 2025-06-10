@@ -1,5 +1,4 @@
 {
-  "testing": "testing",
   "navbar": {
     "home": "Home",
     "services": "Services",
@@ -7,5 +6,17 @@
     "interiorLight": "Interior Light",
     "aboutUs": "About Us",
     "contactUs": "Contact Us"
+  },
+  "hero": {
+    "title": {
+      "line1": "Lighting",
+      "line2": "The",
+      "line3": "Extraordinary",
+      "line4": "With",
+      "line5": "Artistic",
+      "line6": "Vision"
+    },
+    "description": "We deliver fully integrated lighting solutions for facades, aviation, helipads, landscapes, and interior spaces — blending art and engineering for a stunning and safe visual experience.",
+    "cta": "Get In Touch"
   }
 }
