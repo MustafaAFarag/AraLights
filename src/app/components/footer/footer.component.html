@@ -1,5 +1,6 @@
 <footer
   class="bg-secondary-bg text-white font-kaisei font-medium py-8 md:py-16 px-4 md:px-6"
+  [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'"
 >
   <div class="max-w-8xl mx-auto">
     <div
@@ -11,75 +12,85 @@
           <img src="assets/logo.png" alt="logo" />
         </div>
         <p class="text-sm md:text-lg font-cabrito font-normal leading-relaxed">
-          Empowering individuals to transform their homes into personalized
-          havens that reflect their tastes and lifestyles
+          {{ "footer.tagline" | translate }}
         </p>
       </div>
 
       <!-- Quick Links -->
       <div class="w-full md:w-auto min-w-[150px]">
-        <div class="text-white text-base font-semibold mb-4">Quick Links</div>
+        <div class="text-white text-base font-semibold mb-4">
+          {{ "footer.quickLinks" | translate }}
+        </div>
         <ul class="space-y-2 md:space-y-3">
           <li>
-            <a routerLink="/" class="hover:text-active-link transition-colors"
-              >Home</a
-            >
+            <a routerLink="/" class="hover:text-active-link transition-colors">
+              {{ "footer.links.home" | translate }}
+            </a>
           </li>
           <li>
             <a
               routerLink="/about-us"
               class="hover:text-active-link transition-colors"
-              >About Us</a
             >
+              {{ "footer.links.aboutUs" | translate }}
+            </a>
           </li>
           <li>
             <a
               routerLink="/services"
               class="hover:text-active-link transition-colors"
-              >Services</a
             >
+              {{ "footer.links.services" | translate }}
+            </a>
           </li>
           <li>
             <a
               routerLink="/projects"
               class="hover:text-active-link transition-colors"
-              >Projects</a
             >
+              {{ "footer.links.projects" | translate }}
+            </a>
           </li>
           <li>
             <a
               routerLink="/contact-us"
               class="hover:text-active-link transition-colors"
-              >Contact us</a
             >
+              {{ "footer.links.contactUs" | translate }}
+            </a>
           </li>
         </ul>
       </div>
 
       <!-- Services -->
       <div class="w-full md:w-auto min-w-[180px]">
-        <div class="text-white text-base font-semibold mb-4">Services</div>
+        <div class="text-white text-base font-semibold mb-4">
+          {{ "footer.services" | translate }}
+        </div>
         <ul class="space-y-2 md:space-y-3">
           <li>
             <a
               routerLink="/services/full-home-design"
               class="hover:text-active-link transition-colors"
-              >Full Home Design</a
             >
+              {{ "footer.servicesList.fullHomeDesign" | translate }}
+            </a>
           </li>
           <li>
             <a
               routerLink="/services/furniture-selection"
               class="hover:text-active-link transition-colors"
-              >Furniture Selection</a
             >
+              {{ "footer.servicesList.furnitureSelection" | translate }}
+            </a>
           </li>
           <li>
             <a
               routerLink="/services/lighting-design"
               class="hover:text-active-link transition-colors"
-              >Lighting Design</a
             >
+              {{ "footer.servicesList.lightingDesign" | translate }}
+            </a>
           </li>
         </ul>
       </div>
@@ -89,23 +100,25 @@
         <div class="space-y-4">
           <div>
             <div class="text-white text-base font-semibold mb-4">
-              Contact Us
+              {{ "footer.contactUs" | translate }}
             </div>
             <p class="text-sm md:text-base mb-2">
-              Phone:
+              {{ "footer.phone" | translate }}:
               <a
                 href="tel:1234567890"
                 class="hover:text-active-link transition-colors"
-                >(123) 456-7890</a
               >
+                (123) 456-7890
+              </a>
             </p>
             <p class="text-sm md:text-base mb-2">
-              Email:
+              {{ "footer.email" | translate }}:
               <a
                 href="mailto:info@aralighting.com"
                 class="hover:text-active-link transition-colors"
-                >info&#64;aralighting.com</a
               >
+                info&#64;aralighting.com
+              </a>
             </p>
           </div>
           <div class="flex gap-4 md:gap-5 mt-4 md:mt-6">
@@ -166,7 +179,7 @@
       </div>
     </div>
     <div class="text-xs md:text-sm mt-8 md:mt-10 text-center md:text-left">
-      2023 © — Made by Djetstudio
+      {{ "footer.copyright" | translate }}
     </div>
   </div>
 </footer>

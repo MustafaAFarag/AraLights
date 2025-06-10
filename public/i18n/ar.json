@@ -106,5 +106,26 @@
         "downloadPortfolio": "تحميل المحفظة"
       }
     }
+  },
+  "footer": {
+    "tagline": "تمكين الأفراد لتحويل منازلهم إلى ملاذات شخصية تعكس أذواقهم وأنماط حياتهم",
+    "quickLinks": "روابط سريعة",
+    "services": "خدماتنا",
+    "contactUs": "اتصل بنا",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "copyright": "2023 © — صنع بواسطة دجت ستوديو",
+    "links": {
+      "home": "الرئيسية",
+      "aboutUs": "من نحن",
+      "services": "خدماتنا",
+      "projects": "مشاريعنا",
+      "contactUs": "اتصل بنا"
+    },
+    "servicesList": {
+      "fullHomeDesign": "تصميم المنزل الكامل",
+      "furnitureSelection": "اختيار الأثاث",
+      "lightingDesign": "تصميم الإضاءة"
+    }
   }
 }

@@ -105,5 +105,26 @@
         "downloadPortfolio": "Download Portfolio"
       }
     }
+  },
+  "footer": {
+    "tagline": "Empowering individuals to transform their homes into personalized havens that reflect their tastes and lifestyles",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactUs": "Contact Us",
+    "phone": "Phone",
+    "email": "Email",
+    "copyright": "2023 © — Made by Djetstudio",
+    "links": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "services": "Services",
+      "projects": "Projects",
+      "contactUs": "Contact Us"
+    },
+    "servicesList": {
+      "fullHomeDesign": "Full Home Design",
+      "furnitureSelection": "Furniture Selection",
+      "lightingDesign": "Lighting Design"
+    }
   }
 }
