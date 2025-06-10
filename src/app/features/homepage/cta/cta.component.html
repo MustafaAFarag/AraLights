@@ -18,23 +18,39 @@
   </div>
   <h2
     class="text-center text-4xl sm:text-6xl md:text-8xl lg:text-[8.125rem] font-kaisei font-medium relative z-10 mb-6 md:mb-10"
+    [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'"
   >
-    Ara Lightening<br />Portfolio
+    <ng-container *ngTemplateOutlet="titleTemplate"></ng-container>
   </h2>
   <div
     class="flex flex-col items-center md:flex-row justify-center gap-4 relative z-10 px-4"
   >
     <app-button
-      text="Get In Touch"
+      [text]="'homepage.cta.buttons.getInTouch' | translate"
       variant="primary"
       icon="/assets/webps/arrow-right.webp"
       iconAlt="arrow-right"
     ></app-button>
     <app-button
-      text="Download Portfolio"
+      [text]="'homepage.cta.buttons.downloadPortfolio' | translate"
       variant="secondary"
       icon="/assets/webps/arrow-right-white.webp"
       iconAlt="arrow-right"
     ></app-button>
   </div>
 </section>
+
+<ng-template #titleTemplate>
+  <ng-container
+    *ngTemplateOutlet="
+      titleLine;
+      context: { $implicit: 'homepage.cta.title' | translate }
+    "
+  ></ng-container>
+</ng-template>
+
+<ng-template #titleLine let-text>
+  <ng-container *ngFor="let line of text.split('\n'); let last = last">
+    {{ line }}<br *ngIf="!last" />
+  </ng-container>
+</ng-template>

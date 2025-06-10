@@ -98,6 +98,13 @@
         "position": "مدير المشروع",
         "company": "العمارة العالمية"
       }
+    },
+    "cta": {
+      "title": "آرا للإضاءة\nالمحفظة",
+      "buttons": {
+        "getInTouch": "تواصل معنا",
+        "downloadPortfolio": "تحميل المحفظة"
+      }
     }
   }
 }

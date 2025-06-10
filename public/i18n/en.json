@@ -97,6 +97,13 @@
         "position": "Project Manager",
         "company": "Global Architecture"
       }
+    },
+    "cta": {
+      "title": "Ara Lighting\nPortfolio",
+      "buttons": {
+        "getInTouch": "Get In Touch",
+        "downloadPortfolio": "Download Portfolio"
+      }
     }
   }
 }
