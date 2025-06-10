@@ -1,10 +1,12 @@
-<section>
+<section [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'">
   <div
     class="relative py-44 bg-cover bg-center bg-no-repeat flex items-center justify-center"
     style="background-image: url('assets/webps/projects-hero.webp')"
   >
     <div class="absolute inset-0 bg-black/50 opacity-80"></div>
-    <app-section-header title="Ara Projects"></app-section-header>
+    <app-section-header
+      [title]="'projects.title' | translate"
+    ></app-section-header>
   </div>
 
   <div class="max-w-8xl mx-auto py-8 md:py-16 px-4 sm:px-6 lg:px-8">
@@ -20,10 +22,10 @@
               'text-secondary-text': activeIndex !== i,
               'text-active-link': activeIndex === i
             }"
-            [attr.aria-label]="'Filter by ' + item"
+            [attr.aria-label]="'Filter by ' + (item | translate)"
             [attr.aria-pressed]="activeIndex === i"
           >
-            {{ item }}
+            {{ item | translate }}
           </button>
         </li>
       </ul>
@@ -42,7 +44,7 @@
             />
             <img
               src="assets/projects-image.jpg"
-              alt="Al Yasmen Tower Project - Professional lighting installation"
+              [alt]="'projects.project.details.alYasmenTower.name' | translate"
               class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[690px] object-cover rounded-b-lg"
               width="1200"
               height="800"
@@ -56,14 +58,19 @@
         >
           <div class="flex-col gap-2 z-10 font-kaisei flex w-full md:w-auto">
             <span class="text-lg md:text-2xl font-medium">
-              Project : Al Yasmen Tower
+              {{ "projects.project.title" | translate }} :
+              {{ "projects.project.details.alYasmenTower.name" | translate }}
             </span>
-            <span class="text-base md:text-xl">Client : Amr Nasser</span>
-            <span class="text-sm md:text-base lg:text-lg"
-              >Location : Center of the Arabian Gulf between latitudes 25.32 and
-              26.20 north and longitude 50.20 and 50.50 east, near the east
-              coast of the Kingdom.</span
-            >
+            <span class="text-base md:text-xl">
+              {{ "projects.project.client" | translate }} :
+              {{ "projects.project.details.alYasmenTower.client" | translate }}
+            </span>
+            <span class="text-sm md:text-base lg:text-lg">
+              {{ "projects.project.location" | translate }} :
+              {{
+                "projects.project.details.alYasmenTower.location" | translate
+              }}
+            </span>
           </div>
           <picture>
             <source

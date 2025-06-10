@@ -126,5 +126,27 @@
       "furnitureSelection": "Furniture Selection",
       "lightingDesign": "Lighting Design"
     }
+  },
+  "projects": {
+    "title": "Ara Projects",
+    "filters": {
+      "all": "All",
+      "facade": "Facade",
+      "interior": "Interior",
+      "landscape": "Landscape",
+      "aviation": "Aviation"
+    },
+    "project": {
+      "title": "Project",
+      "client": "Client",
+      "location": "Location",
+      "details": {
+        "alYasmenTower": {
+          "name": "Al Yasmen Tower",
+          "client": "Amr Nasser",
+          "location": "Center of the Arabian Gulf between latitudes 25.32 and 26.20 north and longitude 50.20 and 50.50 east, near the east coast of the Kingdom"
+        }
+      }
+    }
   }
 }
