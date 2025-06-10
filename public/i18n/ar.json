@@ -1,0 +1,11 @@
+{
+  "testing": "تجريبي",
+  "navbar": {
+    "home": "الرئيسية",
+    "services": "خدماتنا",
+    "projects": "مشاريعنا",
+    "interiorLight": "الإضاءة الداخلية",
+    "aboutUs": "من نحن",
+    "contactUs": "اتصل بنا"
+  }
+}

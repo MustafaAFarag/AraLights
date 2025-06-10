@@ -1,0 +1,11 @@
+{
+  "testing": "testing",
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "interiorLight": "Interior Light",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us"
+  }
+}

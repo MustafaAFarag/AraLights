@@ -1,5 +1,8 @@
 <!-- navbar.component.html -->
-<section class="bg-primary-bg md:sticky md:top-0 z-[999]">
+<section
+  class="bg-primary-bg md:sticky md:top-0 z-[999]"
+  [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'"
+>
   <nav
     class="max-w-8xl mx-auto flex items-center justify-between py-5 px-4 md:px-6"
   >
@@ -16,46 +19,53 @@
         [routerLinkActiveOptions]="{ exact: true }"
         class="cursor-pointer hover:text-active-link"
       >
-        Home
+        {{ "navbar.home" | translate }}
       </li>
       <li
         routerLink="/services"
         routerLinkActive="text-active-link"
         class="cursor-pointer hover:text-active-link"
       >
-        Services
+        {{ "navbar.services" | translate }}
       </li>
       <li
         routerLink="/projects"
         routerLinkActive="text-active-link"
         class="cursor-pointer hover:text-active-link"
       >
-        Projects
+        {{ "navbar.projects" | translate }}
       </li>
       <li
         routerLink="/interior-light"
         routerLinkActive="text-active-link"
         class="cursor-pointer hover:text-active-link"
       >
-        Interior light
+        {{ "navbar.interiorLight" | translate }}
       </li>
       <li
         routerLink="/about-us"
         routerLinkActive="text-active-link"
         class="cursor-pointer hover:text-active-link"
       >
-        About us
+        {{ "navbar.aboutUs" | translate }}
       </li>
       <li
         routerLink="/contact-us"
         routerLinkActive="text-active-link"
         class="cursor-pointer hover:text-active-link"
       >
-        Contact us
+        {{ "navbar.contactUs" | translate }}
       </li>
     </ul>
 
-    <div class="flex-shrink-0 w-16 hidden lg:block"></div>
+    <div class="flex gap-2">
+      <button
+        (click)="switchLang()"
+        class="px-3 py-1 rounded hover:text-active-link text-lg cursor-pointer"
+      >
+        {{ languageService.getCurrentLanguage() === "ar" ? "English" : "عربي" }}
+      </button>
+    </div>
 
     <!-- Hamburger Icon (Mobile Only) -->
     <button
@@ -83,7 +93,7 @@
 
   <!-- Sidebar Drawer -->
   <div
-    class="fixed top-0 left-0 h-full bg-primary-bg w-[70vw] md:w-[50vw] shadow-lg z-50 transform transition-transform duration-300 ease-in-out"
+    class="fixed top-0 left-0 h-full bg-primary-bg w-[70vw] md:w-[50vw] shadow-lg transform transition-transform duration-300 ease-in-out z-[999]"
     [ngClass]="{
       '-translate-x-full': !isSidebarOpen,
       'translate-x-0': isSidebarOpen
@@ -114,12 +124,12 @@
       <li
         (click)="toggleSidebar()"
         routerLink="/"
-        routerLinkActive=""
+        routerLinkActive="text-active-link"
         [routerLinkActiveOptions]="{ exact: true }"
         class="cursor-pointer hover:text-active-link"
       >
         <span class="pi pi-home text-2xl me-2"></span>
-        Home
+        {{ "navbar.home" | translate }}
       </li>
       <li
         (click)="toggleSidebar()"
@@ -128,7 +138,7 @@
         class="cursor-pointer hover:text-active-link"
       >
         <span class="pi pi-briefcase text-2xl me-2"></span>
-        Services
+        {{ "navbar.services" | translate }}
       </li>
       <li
         (click)="toggleSidebar()"
@@ -137,7 +147,7 @@
         class="cursor-pointer hover:text-active-link"
       >
         <span class="pi pi-images text-2xl me-2"></span>
-        Projects
+        {{ "navbar.projects" | translate }}
       </li>
       <li
         (click)="toggleSidebar()"
@@ -146,16 +156,16 @@
         class="cursor-pointer hover:text-active-link"
       >
         <span class="pi pi-lightbulb text-2xl me-2"></span>
-        Interior light
+        {{ "navbar.interiorLight" | translate }}
       </li>
       <li
         (click)="toggleSidebar()"
-        routerLink="/contact"
+        routerLink="/contact-us"
         routerLinkActive="text-active-link"
         class="cursor-pointer hover:text-active-link"
       >
         <span class="pi pi-envelope text-2xl me-2"></span>
-        Contact us
+        {{ "navbar.contactUs" | translate }}
       </li>
     </ul>
   </div>
@@ -164,6 +174,6 @@
   <div
     *ngIf="isSidebarOpen"
     (click)="toggleSidebar()"
-    class="fixed inset-0 bg-black opacity-50 z-40"
+    class="fixed inset-0 bg-black opacity-50 z-50"
   ></div>
 </section>
