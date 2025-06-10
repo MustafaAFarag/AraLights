@@ -1,7 +1,14 @@
 <div class="py-8 md:py-16 px-4 md:px-6">
-  <app-header title="Our Client Reviews"></app-header>
+  <app-header [title]="'homepage.testimonials.title' | translate"></app-header>
+
+  <div *ngIf="isLoading" class="flex justify-center items-center min-h-[300px]">
+    <div
+      class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"
+    ></div>
+  </div>
 
   <swiper-container
+    *ngIf="!isLoading"
     [slidesPerView]="1"
     [spaceBetween]="30"
     [loop]="true"
@@ -23,8 +30,9 @@
         </div>
         <p
           class="font-cabrito font-normal text-base md:text-lg mb-4 md:mb-5 break-words"
+          [dir]="languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'"
         >
-          {{ testimonial.text }}
+          {{ "homepage.testimonials.testimonial.text" | translate }}
         </p>
         <div class="flex items-center gap-3 md:gap-4">
           <img
@@ -32,11 +40,22 @@
             class="h-9 w-9 md:h-11 md:w-11 rounded-full flex-shrink-0"
           />
           <div class="min-w-0">
-            <h3 class="text-sm md:text-base font-medium truncate">
-              {{ testimonial.name }}
+            <h3
+              class="text-sm md:text-base font-medium truncate"
+              [dir]="
+                languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'
+              "
+            >
+              {{ "homepage.testimonials.testimonial.name" | translate }}
             </h3>
-            <p class="text-xs md:text-sm text-white truncate">
-              {{ testimonial.position }}, {{ testimonial.company }}
+            <p
+              class="text-xs md:text-sm text-white truncate"
+              [dir]="
+                languageService.getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'
+              "
+            >
+              {{ "homepage.testimonials.testimonial.position" | translate }},
+              {{ "homepage.testimonials.testimonial.company" | translate }}
             </p>
           </div>
         </div>

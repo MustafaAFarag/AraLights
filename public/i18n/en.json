@@ -88,6 +88,15 @@
           }
         }
       }
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "testimonial": {
+        "text": "Working with ARA Lighting has been an exceptional experience. Their innovative approach to lighting design and attention to detail has transformed our space into something truly remarkable.Working with ARA Lighting has been an exceptional experience. Their innovative approach to lighting design and attention to detail has transformed our space into something truly remarkable.",
+        "name": "Sarah Johnson",
+        "position": "Project Manager",
+        "company": "Global Architecture"
+      }
     }
   }
 }
